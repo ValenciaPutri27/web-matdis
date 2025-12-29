@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matematika Diskrit - Aturan Penjumlahan & Perkalian</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      @keyframes floatAndRotate {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-10px) rotate(1deg);
+        }
+        50% {
+          transform: translateY(-5px) rotate(-1deg);
+        }
+        75% {
+          transform: translateY(-8px) rotate(0.5deg);
+        }
+      }
+      
+      @keyframes wave {
+        0% {
+          transform: rotate(45deg) translateX(-30%);
+        }
+        100% {
+          transform: rotate(45deg) translateX(30%);
+        }
+      }
+      .fa-tiktok {
+        background: linear-gradient(45deg, #69C9D0, #EE1D52);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader">
+        <div class="math-symbol">+</div>
+        <div class="math-symbol">×</div>
+        <div class="math-symbol">=</div>
+      </div>
+      <p class="loading-text">Memuat Materi Matematika Diskrit...</p>
+    </div>
+
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fas fa-calculator"></i>
+          <span>Kelompok<span class="highlight">3</span></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active"
+              ><i class="fas fa-home"></i> Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#penjumlahan" class="nav-link"
+              ><i class="fas fa-plus-circle"></i> Aturan Penjumlahan</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#perkalian" class="nav-link"
+              ><i class="fas fa-times-circle"></i> Aturan Perkalian</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#latihan" class="nav-link"
+              ><i class="fas fa-pen-square"></i> Latihan Soal</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#kalkulator" class="nav-link"
+              ><i class="fas fa-calculator"></i> Kalkulator</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#video" class="nav-link"
+              ><i class="fas fa-play-circle"></i> Video</a
+            >
+          </li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      
+      <section id="home" class="section active animate__animated">
+        <div class="home-container">
+          <div class="home-left">
+            <h1 class="home-title animate__animated animate__fadeInDown">
+              <span class="math-text">Aturan Penjumlahan & Perkalian</span
+              ><br />
+              <span class="math-subtitle">Matematika Diskrit</span>
+            </h1>
+            <p
+              class="home-description animate__animated animate__fadeIn animate__delay-1s"
+            >
+              
+            </p>
+            <div
+              class="cta-buttons animate__animated animate__fadeInUp animate__delay-2s"
+            >
+              <button class="btn-primary" id="startBtn">
+                <i class="fas fa-play"></i> Mulai Belajar
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="home-right animate__animated animate__fadeInRight animate__delay-1s"
+          >
+            <div class="math-visual">
+              <div class="visual-card add-card">
+                <div class="card-title">Aturan Penjumlahan</div>
+                <div class="card-example">3 + 5 = 8</div>
+                <div class="card-desc">
+                  Digunakan untuk beberapa kejadian yang tidak sekaligus terjadi/berupa pilihan
+                </div>
+              </div>
+              <div class="visual-card multiply-card">
+                <div class="card-title">Aturan Perkalian</div>
+                <div class="card-example">3 × 5 = 15</div>
+                <div class="card-desc">
+                  Digunakan untuk beberapa kejadian yang sekaligus terjadi
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="features animate__animated animate__fadeInUp animate__delay-2s"
+        >
+          <div class="feature-card">
+            <i class="fas fa-book-open"></i>
+            <h3>Materi Lengkap</h3>
+            <p>
+              Penjelasan konsep aturan penjumlahan dan perkalian dengan contoh soal
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-clipboard-check"></i>
+            <h3>Latihan Soal</h3>
+            <p>Uji pemahaman dengan latihan soal dan pembahasan</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-calculator"></i>
+            <h3>Kalkulator</h3>
+            <p>Kalkulator khusus untuk aturan penjumlahan dan perkalian</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-video"></i>
+            <h3>Video Pembelajaran</h3>
+            <p>Penjelasan materi melalui video yang menarik</p>
+          </div>
+        </div>
+        
+        <div class="team-section animate__animated animate__fadeInUp animate__delay-3s">
+          <div class="section-header">
+            <h2><i class="fas fa-users"></i>Tim Anggota Kelompok 3</h2>
+          </div>
+          
+          <div class="team-members">
+            <div class="team-member">
+              <div class="member-photo">
+                <img src="Foto Barel.jpeg" alt="Anggota 1" class="member-img">
+              </div>
+              <div class="member-info">
+                <h3>Barel Kamada</h3>
+                <p class="member-nim">NIM: 1062533</p>
+                <p class="member-role">Kelas 1 TRPL B</p>
+                <p class="member-bio">Mahasiswa Aktif Politeknik Manufaktur Negeri Bangka Belitung Jurusan Informatika.</p>
+                <div class="member-social">
+                  <a href="https://www.instagram.com/nigga_kamada/?igsh=dHkweGRmNXVpZmlp#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.tiktok.com/@rex_arazu" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                  <a href="https://www.youtube.com/@fiscoktzy8960" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="team-member">
+              <div class="member-photo">
+                <img src="foto valen.jpeg" alt="Anggota 2" class="member-img">
+              </div>
+              <div class="member-info">
+                <h3>Valencia Putri Noplita</h3>
+                <p class="member-nim">NIM: 1062559</p>
+                <p class="member-role">Kelas 1 TRPL B</p>
+                <p class="member-bio">Mahasiswa Aktif Politeknik Manufaktur Negeri Bangka Belitung Jurusan Informatika.</p>
+                <div class="member-social">
+                  <a href="https://www.instagram.com/valenncia_putri?igsh=MTY4ZXowZnhsbWw3eg==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.tiktok.com/@valenn27_0?_r=1&_t=ZS-92GsgafQ9PF" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                  <a href="https://youtube.com/@valenciaputrinoplita?si=HShcao-dj9cjKa0A" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="team-member">
+              <div class="member-photo">
+                <img src="Foto Baharu.jpeg" alt="Anggota 3" class="member-img">
+              </div>
+              <div class="member-info">
+                <h3>Julianto Baharu</h3>
+                <p class="member-nim">NIM: 1062541</p>
+                <p class="member-role">Kelas 1 TRPL B</p>
+                <p class="member-bio">Mahasiswa Aktif Politeknik Manufaktur Negeri Bangka Belitung Jurusan Informatika.</p>
+                <div class="member-social">
+                  <a href="https://www.instagram.com/julian97l/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href=" https://www.tiktok.com/@hayuuukk68" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                  <a href="https://www.youtube.com/@juliantobaharuts" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="team-footer">
+            <p><i class="fas fa-graduation-cap"></i> Kelompok 3 - Matematika Diskrit | Politeknik Manufaktur Negeri Bangka Belitung</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="penjumlahan" class="section">
+        <div class="section-header">
+          <h2><i class="fas fa-plus-circle"></i> Aturan Penjumlahan</h2>
+          <p class="section-subtitle">
+            Konsep dan penerapan aturan penjumlahan dalam matematika diskrit
+          </p>
+        </div>
+
+        <div class="content-container">
+          <div class="theory-card">
+            <h3 class="theory-title">
+              <i class="fas fa-lightbulb"></i> Pengertian
+            </h3>
+            <p>
+              Aturan penjumlahan (rule of sum) dalam matematika diskrit adalah
+              prinsip yang menyatakan bahwa jika suatu tugas dapat dilakukan
+              dengan <strong>n</strong> cara dan tugas lain dapat dilakukan
+              dengan <strong>m</strong> cara, dan kedua tugas tersebut tidak
+              dapat dilakukan secara bersamaan, maka banyaknya cara untuk
+              melakukan salah satu dari kedua tugas tersebut adalah
+              <strong>n + m</strong>.
+            </p>
+
+            <div class="formula-box">
+              <h4>
+                <i class="fas fa-square-root-alt"></i>Aturan Penjumlahan
+              </h4>
+              <div class="formula"></div>
+              <p class="formula-desc">
+                Aturan Penjumlahan biasanya digunakan untuk beberapa kejadian yang "TIDAK SEKALIGUS TERJADI"artinya yang terjadi hanya salah satu saja dan biasanya menggunakan kata penghubung "ATAU"
+              </p>
+            </div>
+
+            <h3 class="theory-title">
+              <i class="fas fa-info-circle"></i> Penjelasan Lengkap
+            </h3>
+            <p>
+              Aturan penjumlahan digunakan ketika kita memiliki beberapa pilihan
+              yang saling eksklusif (hanya bisa memilih satu). Konsep ini sangat
+              penting dalam kombinatorik, yaitu cabang matematika yang mempelajari
+              cara menghitung kemungkinan pengaturan objek.
+            </p>
+            
+            <div class="content-detail">
+              <h5><i class="fas fa-check-circle"></i> Prinsip Dasar</h5>
+              <p>
+                Prinsip dasar aturan penjumlahan adalah menghitung jumlah cara
+                untuk memilih satu elemen dari beberapa himpunan yang saling lepas.
+                Jika himpunan A memiliki m elemen dan himpunan B memiliki n elemen,
+                maka total cara memilih satu elemen dari A atau B adalah m + n.
+              </p>
+              
+              <h5><i class="fas fa-check-circle"></i> Syarat Penggunaan</h5>
+              <ul>
+                <li>Pilihan harus saling eksklusif (tidak bisa memilih lebih dari satu)</li>
+                <li>Hanya satu pilihan yang dapat dipilih pada satu waktu tidak boleh secara bersamaan</li>
+              </ul>
+              
+              <h5><i class="fas fa-check-circle"></i> Contoh Formal</h5>
+              <p>
+                Misalkan ada dua himpunan: A = {a₁, a₂, a₃} dan B = {b₁, b₂}.
+                Banyaknya cara memilih satu elemen dari A atau B adalah
+                3 + 2 = 5 cara.
+              </p>
+              
+              <h5><i class="fas fa-check-circle"></i>Penerapan dalam kehidupan sehari-hari</h5>
+              <p>
+                1.Memilih Rute Transportasi
+                 (Karena seseorang hanya memilih satu jenis kendaraan sekali jalan)
+                2.Memilih Menu Makanan di Restoran
+                 (karena pelanggan hanya memilih salah satu item makanan atau salah satu minuman).
+              </p>
+              
+              <h5><i class="fas fa-check-circle"></i> Penerapan dalam Informatika</h5>
+              <ul>
+                <li>Menghitung kompleksitas algoritma dengan beberapa kasus</li>
+                <li>Analisis jumlah kemungkinan output program</li>
+                <li>Perhitungan dalam teori probabilitas</li>
+                <li>Optimasi pilihan dalam pemrograman</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="examples-card">
+            <h3 class="examples-title">
+              <i class="fas fa-list-ol"></i> Contoh Soal
+            </h3>
+
+            <div class="example-item">
+              <div class="example-number">1</div>
+              <div class="example-content">
+                <p>
+                  Sebuah restoran menyediakan 5 jenis makanan pembuka dan 7
+                  jenis makanan utama. Jika seseorang hanya boleh memilih satu
+                  jenis makanan (pembuka ATAU utama), berapa banyak pilihan yang
+                  tersedia?
+                </p>
+                <button class="show-solution" data-example="1">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution1">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan penjumlahan
+                    karena hanya boleh memilih satu jenis makanan (pembuka ATAU
+                    utama).
+                  </p>
+                  <p><strong>Perhitungan:</strong> 5 + 7 = 12 pilihan</p>
+                  <p><strong>Penjelasan:</strong> Karena hanya memilih satu item dari dua kategori yang berbeda, kita jumlahkan semua pilihan yang tersedia.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <div class="example-number">2</div>
+              <div class="example-content">
+                <p>
+                  Dalam sebuah perpustakaan terdapat 8 buku matematika dan 6
+                  buku fisika. Berapa banyak cara untuk meminjam satu buku
+                  (matematika ATAU fisika)?
+                </p>
+                <button class="show-solution" data-example="2">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution2">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan penjumlahan
+                    karena hanya meminjam satu buku (matematika ATAU fisika).
+                  </p>
+                  <p><strong>Perhitungan:</strong> 8 + 6 = 14 cara</p>
+                  <p><strong>Penjelasan:</strong> Setiap buku matematika dan fisika dihitung sebagai pilihan yang terpisah karena hanya meminjam satu buku.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <div class="example-number">3</div>
+              <div class="example-content">
+                <p>
+                  Seorang siswa dapat memilih mengikuti klub olahraga: ada 3
+                  pilihan olahraga tim dan 4 pilihan olahraga individu. Jika
+                  siswa hanya boleh memilih satu klub, berapa banyak pilihan
+                  yang tersedia?
+                </p>
+                <button class="show-solution" data-example="3">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution3">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan penjumlahan
+                    karena hanya memilih satu klub.
+                  </p>
+                  <p><strong>Perhitungan:</strong> 3 + 4 = 7 pilihan</p>
+                  <p><strong>Penjelasan:</strong> Siswa hanya bisa memilih satu klub dari total 7 pilihan yang tersedia.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <div class="example-number">4</div>
+              <div class="example-content">
+                <p>
+                  Dalam kotak terdapat 10 bola merah dan 15 bola biru. Berapa
+                  banyak cara untuk mengambil satu bola (merah ATAU biru)?
+                </p>
+                <button class="show-solution" data-example="4">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution4">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan penjumlahan
+                    karena hanya mengambil satu bola.
+                  </p>
+                  <p><strong>Perhitungan:</strong> 10 + 15 = 25 cara</p>
+                  <p><strong>Penjelasan:</strong> Setiap bola dihitung sebagai pilihan yang unik, jadi total cara adalah jumlah semua bola.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <div class="example-number">5</div>
+              <div class="example-content">
+                <p>
+                  Seorang turis ingin mengunjungi museum atau taman. Ada 5
+                  museum dan 3 taman di kota tersebut. Berapa banyak pilihan
+                  yang tersedia?
+                </p>
+                <button class="show-solution" data-example="5">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution5">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan penjumlahan
+                    karena hanya mengunjungi museum ATAU taman.
+                  </p>
+                  <p><strong>Perhitungan:</strong> 5 + 3 = 8 pilihan</p>
+                  <p><strong>Penjelasan:</strong> Turis hanya bisa mengunjungi satu tempat wisata dari total 8 pilihan yang tersedia.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="additional-example">
+              <h4><i class="fas fa-star"></i> Contoh Tambahan</h4>
+              <p>
+                <strong>Soal:</strong> Sebuah perusahaan menawarkan 7 posisi di divisi pemasaran dan 
+                5 posisi di divisi keuangan. Jika seorang pelamar hanya bisa melamar satu posisi, 
+                berapa banyak pilihan yang tersedia?
+              </p>
+              <p>
+                <strong>Solusi:</strong> Menggunakan aturan penjumlahan: 7 + 5 = 12 pilihan
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="perkalian" class="section">
+        <div class="section-header">
+          <h2><i class="fas fa-times-circle"></i> Aturan Perkalian</h2>
+          <p class="section-subtitle">
+            Konsep dan penerapan aturan perkalian dalam matematika diskrit
+          </p>
+        </div>
+
+        <div class="content-container">
+          <div class="theory-card">
+            <h3 class="theory-title">
+              <i class="fas fa-lightbulb"></i> Pengertian
+            </h3>
+            <p>
+              Aturan perkalian (rule of product) dalam matematika diskrit adalah
+              prinsip yang menyatakan bahwa jika suatu tugas terdiri dari
+              <strong>k</strong> langkah berurutan, di mana langkah pertama
+              dapat dilakukan dengan <strong>n₁</strong> cara, langkah kedua
+              dengan <strong>n₂</strong> cara, dan seterusnya hingga langkah
+              ke-k dengan <strong>nₖ</strong> cara, maka banyaknya cara untuk
+              melakukan keseluruhan tugas adalah
+              <strong>n₁ × n₂ × ... × nₖ</strong>.
+            </p>
+
+            <div class="formula-box">
+              <h4>
+                <i class="fas fa-square-root-alt"></i>Aturan Perkalian
+              </h4>
+              <p class="formula-desc">
+                Aturan Perkalian biasanya digunakan untuk beberapa kejadian yang semuanya "DAPAT TERJADI"dan biasanya menggunakan kata penghubung "DAN"
+              </p>
+            </div>
+
+            <h3 class="theory-title">
+              <i class="fas fa-info-circle"></i> Penjelasan Lengkap
+            </h3>
+            <p>
+              Aturan perkalian digunakan ketika kita melakukan serangkaian
+              pilihan berurutan. Konsep ini mendasar dalam kombinatorik dan
+              memiliki banyak aplikasi dalam ilmu komputer, khususnya dalam
+              analisis algoritma dan teori probabilitas.
+            </p>
+            
+            <div class="content-detail">
+              <h5><i class="fas fa-check-circle"></i> Prinsip Dasar</h5>
+              <p>
+                Prinsip dasar aturan perkalian adalah menghitung jumlah kombinasi
+                dari beberapa pilihan independen. Jika ada m cara untuk melakukan
+                langkah pertama dan n cara untuk melakukan langkah kedua, maka
+                total cara untuk melakukan kedua langkah adalah m × n.
+              </p>
+              
+              <h5><i class="fas fa-check-circle"></i> Syarat Penggunaan</h5>
+              <ul>
+                <li>Pilihan harus independen (pilihan satu tidak mempengaruhi yang lain)</li>
+                <li>Langkah-langkah harus berurutan</li>
+                <li>Semua kombinasi harus dihitung</li>
+              </ul>
+              
+              <h5><i class="fas fa-check-circle"></i> Contoh Formal</h5>
+              <p>
+                Misalkan untuk memilih pakaian: ada 3 pilihan baju (B₁, B₂, B₃)
+                dan 4 pilihan celana (C₁, C₂, C₃, C₄). Banyaknya kombinasi pakaian
+                adalah 3 × 4 = 12 kombinasi.
+              </p>
+              <h5><i class="fas fa-check-circle"></i> Penerapan dalam Informatika</h5>
+              <ul>
+                <li>Menghitung kompleksitas algoritma nested loop</li>
+                <li>Analisis ruang kunci dalam kriptografi</li>
+                <li>Generasi kombinasi dan permutasi</li>
+                <li>Perhitungan dalam database dan struktur data</li>
+                <li>Optimasi pencarian dalam ruang state</li>
+              </ul>
+              
+              <h5><i class="fas fa-check-circle"></i> Hubungan dengan Aturan Penjumlahan</h5>
+              <p>
+                Aturan perkalian digunakan untuk kejadian "DAN" (konjungsi),
+                sedangkan aturan penjumlahan digunakan untuk kejadian "ATAU"
+                (disjungsi). Kedua aturan ini sering digunakan bersama dalam
+                menyelesaikan masalah kombinatorik yang kompleks.
+              </p>
+            </div>
+          </div>
+
+          <div class="examples-card">
+            <h3 class="examples-title">
+              <i class="fas fa-list-ol"></i> Contoh Soal
+            </h3>
+
+            <div class="example-item">
+              <div class="example-number">1</div>
+              <div class="example-content">
+                <p>
+                  Sebuah restoran menawarkan 3 jenis makanan pembuka, 5 jenis
+                  makanan utama, dan 2 jenis makanan penutup. Berapa banyak cara
+                  memilih menu lengkap (pembuka DAN utama DAN penutup)?
+                </p>
+                <button class="show-solution" data-example="6">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution6">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan perkalian karena
+                    memilih semua jenis makanan (pembuka DAN utama DAN penutup).
+                  </p>
+                  <p><strong>Perhitungan:</strong> 3 × 5 × 2 = 30 cara</p>
+                  <p><strong>Penjelasan:</strong> Setiap pilihan pembuka dapat dipasangkan dengan setiap pilihan utama, dan setiap pasangan tersebut dapat dipasangkan dengan setiap pilihan penutup.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <div class="example-number">2</div>
+              <div class="example-content">
+                <p>
+                  Berapa banyak plat nomor yang dapat dibuat dengan 2 huruf
+                  berbeda diikuti 3 angka? (Huruf: A-Z, Angka: 0-9)
+                </p>
+                <button class="show-solution" data-example="7">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution7">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan perkalian karena
+                    memilih huruf DAN angka secara berurutan.
+                  </p>
+                  <p><strong>Perhitungan:</strong> 26 × 25 × 10 × 10 × 10 = 650.000 plat</p>
+                  <p><strong>Penjelasan:</strong> Huruf pertama 26 pilihan, huruf kedua 25 pilihan (karena berbeda), dan setiap angka 10 pilihan (0-9).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <div class="example-number">3</div>
+              <div class="example-content">
+                <p>
+                  Seorang siswa memiliki 4 kemeja, 3 celana, dan 2 pasang
+                  sepatu. Berapa banyak kombinasi pakaian yang berbeda dapat
+                  dibuat?
+                </p>
+                <button class="show-solution" data-example="8">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution8">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan perkalian karena
+                    memilih kemeja DAN celana DAN sepatu.
+                  </p>
+                  <p><strong>Perhitungan:</strong> 4 × 3 × 2 = 24 kombinasi</p>
+                  <p><strong>Penjelasan:</strong> Setiap kemeja dapat dipasangkan dengan setiap celana, dan setiap pasangan tersebut dapat dipasangkan dengan setiap sepatu.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <div class="example-number">4</div>
+              <div class="example-content">
+                <p>
+                  Berapa banyak password 4 karakter yang dapat dibuat dengan 1
+                  huruf kapital diikuti 3 angka?
+                </p>
+                <button class="show-solution" data-example="9">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution9">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan perkalian karena
+                    memilih huruf DAN angka secara berurutan.
+                  </p>
+                  <p><strong>Perhitungan:</strong> 26 × 10 × 10 × 10 = 26.000 password</p>
+                  <p><strong>Penjelasan:</strong> Huruf kapital ada 26 pilihan (A-Z), dan setiap angka ada 10 pilihan (0-9).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-item">
+              <div class="example-number">5</div>
+              <div class="example-content">
+                <p>
+                  Dalam suatu perlombaan dengan 8 peserta, berapa banyak
+                  kemungkinan juara 1, 2, dan 3?
+                </p>
+                <button class="show-solution" data-example="10">
+                  Tampilkan Solusi
+                </button>
+                <div class="solution" id="solution10">
+                  <p>
+                    <strong>Solusi:</strong> Menggunakan aturan perkalian karena
+                    menentukan juara 1, 2, dan 3 secara berurutan.
+                  </p>
+                  <p><strong>Perhitungan:</strong> 8 × 7 × 6 = 336 kemungkinan</p>
+                  <p><strong>Penjelasan:</strong> Juara pertama 8 pilihan, juara kedua 7 pilihan (sisa peserta), juara ketiga 6 pilihan (sisa peserta).</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="additional-example">
+              <h4><i class="fas fa-star"></i> Contoh Tambahan</h4>
+              <p>
+                <strong>Soal:</strong> Berapa banyak bilangan 3 digit yang dapat dibentuk dari 
+                angka 1, 2, 3, 4, 5 tanpa pengulangan?
+              </p>
+              <p>
+                <strong>Solusi:</strong> Menggunakan aturan perkalian: 5 × 4 × 3 = 60 bilangan
+              </p>
+              <p>
+                <strong>Penjelasan:</strong> Digit pertama 5 pilihan, digit kedua 4 pilihan (sisa angka), 
+                digit ketiga 3 pilihan (sisa angka).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="latihan" class="section">
+        <div class="section-header">
+          <h2><i class="fas fa-pen-square"></i> Latihan Soal</h2>
+          <p class="section-subtitle">
+            Uji pemahamanmu dengan latihan soal berikut
+          </p>
+        </div>
+
+        <div class="quiz-container">
+          <div class="quiz-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text">
+              Soal <span id="currentQuestion">1</span> dari 5
+            </p>
+          </div>
+
+          <div class="quiz-content">
+            <div class="quiz-question" id="quizQuestion">
+              <h3 id="questionText"></h3>
+              <div class="quiz-options" id="quizOptions"></div>
+            </div>
+
+            <div class="quiz-feedback" id="quizFeedback">
+              <div class="feedback-correct" id="feedbackCorrect">
+                <i class="fas fa-check-circle"></i>
+                <h4>Jawaban Kamu Benar!</h4>
+                <p id="correctExplanation"></p>
+              </div>
+              <div class="feedback-incorrect" id="feedbackIncorrect">
+                <i class="fas fa-times-circle"></i>
+                <h4>Jawaban Kamu Salah</h4>
+                <p id="incorrectExplanation"></p>
+              </div>
+            </div>
+
+            <div class="quiz-navigation">
+              <button class="btn-secondary" id="prevBtn" disabled>
+                <i class="fas fa-arrow-left"></i> Soal Sebelumnya
+              </button>
+              <button class="btn-primary" id="nextBtn">
+                Soal Selanjutnya <i class="fas fa-arrow-right"></i>
+              </button>
+              <button class="btn-submit" id="submitQuiz">
+                <i class="fas fa-paper-plane"></i> Kirim Jawaban
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-result" id="quizResult">
+            <h3><i class="fas fa-trophy"></i> Hasil Jawaban Soal</h3>
+            <div class="result-score">
+              <div class="score-circle"><span id="scoreValue">0</span>%</div>
+              <p>
+                Kamu menjawab <strong id="correctCount">0</strong> dari 5 soal
+                dengan benar
+              </p>
+            </div>
+            <button class="btn-primary" id="restartQuiz">
+              <i class="fas fa-redo"></i> Coba Lagi
+            </button>
+          </div>
+
+          <div class="external-quiz-link">
+            <h3>
+              <i class="fas fa-external-link-alt"></i> Ingin Latihan Lebih
+              Banyak?
+            </h3>
+            <p>
+              Coba kuis interaktif lainnya untuk menguji pemahamanmu lebih
+              dalam:
+            </p>
+            <div class="quiz-links">
+              <a
+                href="https://wayground.com/join?gc=22037542"
+                target="_blank"
+                class="quiz-link"
+              >
+                <i class="fas fa-puzzle-piece"></i> Materi Aturan Penjumlahan
+              </a>
+              <a
+                href="https://wayground.com/join?gc=48129062"
+                target="_blank"
+                class="quiz-link"
+              >
+                <i class="fas fa-cubes"></i> Materi Aturan Perkalian
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kalkulator" class="section">
+        <div class="section-header">
+          <h2>
+            <i class="fas fa-calculator"></i> Kalkulator Aturan Penjumlahan &
+            Perkalian
+          </h2>
+          <p class="section-subtitle">
+            Hitung menggunakan aturan penjumlahan dan perkalian
+          </p>
+        </div>
+
+        <div class="calculator-container">
+          <div class="calculator-tabs">
+            <button class="calc-tab active" id="tabAddition">
+              <i class="fas fa-plus-circle"></i> Aturan Penjumlahan
+            </button>
+            <button class="calc-tab" id="tabMultiplication">
+              <i class="fas fa-times-circle"></i> Aturan Perkalian
+            </button>
+          </div>
+
+          <div class="calculator-content">
+
+            <div class="calc-panel active" id="calcAddition">
+              <div class="calc-instruction">
+                <h4><i class="fas fa-info-circle"></i> Cara Penggunaan</h4>
+                <p>
+                  Masukkan jumlah pilihan untuk setiap kategori. Kalkulator akan
+                  menjumlahkan semua pilihan (aturan penjumlahan).
+                </p>
+                <p>
+                  <strong>Contoh:</strong> Jika ada 3 jenis buah dan 4 jenis
+                  sayuran, maka total pilihan = 3 + 4 = 7
+                </p>
+              </div>
+
+              <div class="calc-inputs">
+                <div class="input-group">
+                  <label for="addInput1">Jumlah Pilihan Kategori 1:</label>
+                  <input
+                    type="number"
+                    id="addInput1"
+                    min="1"
+                    max="100"
+                    value="3"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="addInput2">Jumlah Pilihan Kategori 2:</label>
+                  <input
+                    type="number"
+                    id="addInput2"
+                    min="1"
+                    max="100"
+                    value="4"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="addInput3"
+                    >Jumlah Pilihan Kategori 3 (opsional):</label
+                  >
+                  <input
+                    type="number"
+                    id="addInput3"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+
+              <button class="btn-calculate" id="calculateAddition">
+                <i class="fas fa-calculator"></i> Hitung dengan Aturan
+                Penjumlahan
+              </button>
+
+              <div class="calc-result" id="additionResult">
+                <h4><i class="fas fa-check-circle"></i> Hasil Perhitungan</h4>
+                <div class="result-box">
+                  <p id="additionCalculation"></p>
+                  <h3 id="additionTotal"></h3>
+                  <p id="additionMethod" class="method-info">
+                    Ini menggunakan metode aturan penjumlahan
+                  </p>
+                  <p id="additionError" class="error-info">
+                    Coba lagi. Pastikan semua nilai telah diisi dengan benar.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-panel" id="calcMultiplication">
+              <div class="calc-instruction">
+                <h4><i class="fas fa-info-circle"></i> Cara Penggunaan</h4>
+                <p>
+                  Masukkan jumlah pilihan untuk setiap langkah. Kalkulator akan
+                  mengalikan semua pilihan (aturan perkalian).
+                </p>
+                <p>
+                  <strong>Contoh:</strong> Jika ada 3 baju, 4 celana, dan 2
+                  sepatu, maka total kombinasi = 3 × 4 × 2 = 24
+                </p>
+              </div>
+
+              <div class="calc-inputs">
+                <div class="input-group">
+                  <label for="mulInput1">Jumlah Pilihan Langkah 1:</label>
+                  <input
+                    type="number"
+                    id="mulInput1"
+                    min="1"
+                    max="100"
+                    value="3"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="mulInput2">Jumlah Pilihan Langkah 2:</label>
+                  <input
+                    type="number"
+                    id="mulInput2"
+                    min="1"
+                    max="100"
+                    value="4"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="mulInput3"
+                    >Jumlah Pilihan Langkah 3 (opsional):</label
+                  >
+                  <input
+                    type="number"
+                    id="mulInput3"
+                    min="1"
+                    max="100"
+                    value="2"
+                  />
+                </div>
+              </div>
+
+              <button class="btn-calculate" id="calculateMultiplication">
+                <i class="fas fa-calculator"></i> Hitung dengan Aturan Perkalian
+              </button>
+
+              <div class="calc-result" id="multiplicationResult">
+                <h4><i class="fas fa-check-circle"></i> Hasil Perhitungan</h4>
+                <div class="result-box">
+                  <p id="multiplicationCalculation"></p>
+                  <h3 id="multiplicationTotal"></h3>
+                  <p id="multiplicationMethod" class="method-info">
+                    Ini menggunakan metode aturan perkalian
+                  </p>
+                  <p id="multiplicationError" class="error-info">
+                    Coba lagi. Pastikan semua nilai telah diisi dengan benar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-examples">
+            <h4><i class="fas fa-lightbulb"></i> Contoh Penerapan</h4>
+            <div class="example-grid">
+              <div class="example-item">
+                <h5>Aturan Penjumlahan</h5>
+                <p>Memilih 1 dari beberapa pilihan eksklusif:</p>
+                <ul>
+                  <li>Memilih minuman: 5 jus ATAU 3 soda</li>
+                  <li>Memilih transportasi: 4 bus ATAU 2 kereta</li>
+                  <li>
+                    Memilih mata kuliah: 6 pilihan semester ini ATAU 4 pilihan
+                    semester depan
+                  </li>
+                </ul>
+              </div>
+              <div class="example-item">
+                <h5>Aturan Perkalian</h5>
+                <p>Memilih beberapa pilihan berurutan:</p>
+                <ul>
+                  <li>Memilih pakaian: 3 baju DAN 4 celana</li>
+                  <li>Membuat password: 2 huruf DAN 3 angka</li>
+                  <li>Memilih menu: 2 pembuka DAN 3 utama DAN 2 penutup</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="video" class="section">
+        <div class="section-header">
+          <h2><i class="fas fa-play-circle"></i> Video Pembelajaran</h2>
+          <p class="section-subtitle">
+            Pelajari materi melalui video penjelasan
+          </p>
+        </div>
+
+        <div class="video-container">
+          <div class="video-player">
+            <div class="video-placeholder" id="videoPlaceholder">
+              <i class="fas fa-play-circle"></i>
+              <p>Pilih video untuk diputar</p>
+            </div>
+            <div class="video-wrapper" id="videoWrapper">
+              <iframe
+                id="videoFrame"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+<div class="video-list">
+  <h4><i class="fas fa-list"></i> Daftar Video</h4>
+  
+  <!-- Video 1 -->
+  <div class="video-item active"
+       data-video="https://www.youtube.com/embed/gaUSFKZix2Y">
+    <div class="video-thumb">
+      <i class="fas fa-play"></i>
+      <img src="https://img.youtube.com/vi/gaUSFKZix2Y/hqdefault.jpg"
+           alt="Konsep Aturan Penjumlahan dan Perkalian">
+    </div>
+    <div class="video-info">
+      <h5>Konsep Aturan Penjumlahan dan Aturan Perkalian</h5>
+      <p>Penjelasan lengkap tentang materi aturan penjumlahan dan aturan perkalian dalam matematika diskrit</p>
+      <span class="video-duration">10:00</span>
+    </div>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="video-item"
+       data-video="https://www.youtube.com/embed/dNlI1xmCQuQ">
+    <div class="video-thumb">
+      <i class="fas fa-play"></i>
+      <img src="https://img.youtube.com/vi/dNlI1xmCQuQ/hqdefault.jpg"
+           alt="Contoh Soal Kombinasi">
+    </div>
+    <div class="video-info">
+      <h5>Contoh Soal Kombinasi Aturan Penjumlahan dan Perkalian</h5>
+      <p>Penjelasan lengkap tentang cara pengerjaan contoh soal kombinasi aturan penjumlahan dan perkalian</p>
+      <span class="video-duration">7:26</span>
+    </div>
+  </div>
+
+  <!-- Video 3 -->
+  <div class="video-item"
+       data-video="https://www.youtube.com/embed/3s2f_ZeODP4">
+    <div class="video-thumb">
+      <i class="fas fa-play"></i>
+      <img src="https://img.youtube.com/vi/3s2f_ZeODP4/hqdefault.jpg"
+           alt="Kegunaan Materi">
+    </div>
+    <div class="video-info">
+      <h5>Kegunaan Materi Aturan Penjumlahan dan Perkalian</h5>
+      <p>Penjelasan tentang kegunaan materi aturan penjumlahan dan perkalian dalam kehidupan sehari-hari dan pada jurusan informatika</p>
+      <span class="video-duration">4:01</span>
+    </div>
+  </div>
+</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>
+            <i class="fas fa-calculator"></i> Matematika<span class="highlight"
+              >Diskrit</span
+            >
+          </h3>
+          <p>
+            Platform pembelajaran interaktif untuk memahami aturan penjumlahan
+            dan perkalian dalam matematika diskrit.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Menu Navigasi</h4>
+          <ul>
+            <li>
+              <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+            </li>
+            <li>
+              <a href="#penjumlahan"
+                ><i class="fas fa-chevron-right"></i> Aturan Penjumlahan</a
+              >
+            </li>
+            <li>
+              <a href="#perkalian"
+                ><i class="fas fa-chevron-right"></i> Aturan Perkalian</a
+              >
+            </li>
+            <li>
+              <a href="#latihan"
+                ><i class="fas fa-chevron-right"></i> Latihan Soal</a
+              >
+            </li>
+            <li>
+              <a href="#kalkulator"
+                ><i class="fas fa-chevron-right"></i> Kalkulator</a
+              >
+            </li>
+            <li>
+              <a href="#video"><i class="fas fa-chevron-right"></i> Video</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Kontak</h4>
+          <p><i class="fas fa-envelope"></i> info@mathdiskrit.com</p>
+          <p><i class="fas fa-phone"></i> +62823-7739-4897</p>
+          <p><i class="fas fa-map-marker-alt"></i> Bangka Belitung, Indonesia</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Sungailiat | Politeknik Manufaktur Bangka Belitung
+          <i class="fas fa-heart"></i> Kaidah Penjumlahan & Perkalian
+        </p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    
+    <script src="script (1).js"></script>
+  </body>
+</html>

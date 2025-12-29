@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Pembelajaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef1f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .video-player {
+      flex: 3;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 420px;
+    }
+
+    .video-player iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .playlist {
+      flex: 1.5;
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      max-height: 420px;
+      overflow-y: auto;
+    }
+
+    .video-item {
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .video-item:hover,
+    .video-item.active {
+      background: #e6ecff;
+    }
+
+    .video-item img {
+      width: 120px;
+      border-radius: 6px;
+    }
+
+    .video-info h5 {
+      margin: 0 0 5px;
+      font-size: 14px;
+    }
+
+    .video-info p {
+      margin: 0;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- PLAYER -->
+  <div class="video-player">
+    <iframe
+      id="videoPlayer"
+      src="https://www.youtube.com/embed/gaUSFKZix2Y"
+      title="YouTube video player"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- PLAYLIST -->
+  <div class="playlist">
+
+    <div class="video-item active"
+      data-video="https://www.youtube.com/embed/gaUSFKZix2Y">
+      <img src="https://img.youtube.com/vi/gaUSFKZix2Y/hqdefault.jpg">
+      <div class="video-info">
+        <h5>Konsep Aturan Penjumlahan dan Perkalian</h5>
+        <p>Video penjelasan konsep</p>
+      </div>
+    </div>
+
+    <div class="video-item"
+      data-video="https://www.youtube.com/embed/dNlI1xmCQuQ">
+      <img src="https://img.youtube.com/vi/dNlI1xmCQuQ/hqdefault.jpg">
+      <div class="video-info">
+        <h5>Contoh Soal Kombinasi</h5>
+        <p>Pembahasan soal</p>
+      </div>
+    </div>
+
+    <div class="video-item"
+      data-video="https://www.youtube.com/embed/3s2f_ZeODP4">
+      <img src="https://img.youtube.com/vi/3s2f_ZeODP4/hqdefault.jpg">
+      <div class="video-info">
+        <h5>Kegunaan Materi</h5>
+        <p>Penerapan dalam kehidupan</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+  const videoItems = document.querySelectorAll('.video-item');
+  const videoPlayer = document.getElementById('videoPlayer');
+
+  videoItems.forEach(item => {
+    item.addEventListener('click', () => {
+
+      // hapus active
+      videoItems.forEach(v => v.classList.remove('active'));
+      item.classList.add('active');
+
+      // ganti video (CARA AMAN, TIDAK ERROR)
+      const videoUrl = item.getAttribute('data-video');
+      videoPlayer.src = videoUrl;
+    });
+  });
+</script>
+
+</body>
+</html>
